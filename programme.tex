@@ -1,0 +1,166 @@
+\documentclass[10pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[a3paper,margin=4mm]{geometry}
+\usepackage[table]{xcolor}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{lmodern}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.0}
+
+\definecolor{lightgray}{HTML}{F0F0F0}
+\definecolor{sessiongray}{HTML}{D9D9D9}
+
+\newcolumntype{T}{>{\centering\arraybackslash\bfseries}p{25mm}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
+% Wider rectangular contribution-profile boxes.
+\newcommand{\TypeBox}[1]{\raisebox{0.20ex}{\framebox[7mm][c]{\scriptsize\bfseries #1}}\hspace{0.38em}}
+
+\newcommand{\Talk}[4]{%
+  \begin{minipage}[c][24mm][c]{\linewidth}
+    {\small\textbf{#2 (\##1)}\hspace{0.25em}#4}\\[-1pt]
+    {\small #3}
+  \end{minipage}%
+}
+
+\newcommand{\EmptyTalk}{%
+  \begin{minipage}[c][20.0mm][c]{\linewidth}\mbox{}\end{minipage}%
+}
+
+\newcommand{\CommonEvent}[2]{%
+  \textbf{#1} &
+  \multicolumn{3}{c|}{%
+    \cellcolor{lightgray}%
+    \begin{minipage}[c][11mm][c]{0.86\textwidth}
+      \centering\textbf{#2}
+    \end{minipage}%
+  }\\\hline
+}
+
+\newcommand{\CommonEventCompact}[2]{%
+  \textbf{#1} &
+  \multicolumn{3}{c|}{%
+    \cellcolor{lightgray}%
+    \begin{minipage}[c][6mm][c]{0.86\textwidth}
+      \centering\textbf{#2}
+    \end{minipage}%
+  }\\\hline
+}
+
+
+\newcommand{\OpeningEvent}{%
+  \textbf{09:00--09:30} &
+  \multicolumn{3}{c|}{%
+    \cellcolor{lightgray}%
+    \begin{minipage}[c][18mm][c]{0.86\textwidth}
+      \centering
+      \textbf{Opening session}\\[1mm]
+      {\textbf{Organising Committee}\\
+      \textbf{Prof. Ana Veloso, Vice-Rector of the Polytechnic University of Coimbra (UPC), representing the Rector}\\
+      \textbf{Prof. Nuno Cid Martins, President of the Coimbra Institute of Engineering (ISEC)}}
+    \end{minipage}%
+  }\\\hline
+}
+
+\newcommand{\ProgrammeNote}{%
+  {\footnotesize\textit{*Each oral contribution consists of a 10-minute presentation followed by 5 minutes for questions.}\hfill
+  Contribution: \TypeBox{R} Research; \TypeBox{I} Industry; \TypeBox{S} Student.}%
+}
+
+\newcommand{\ProgrammeHeader}[1]{%
+  {\centering \LARGE\bfseries
+    International Conference on Emerging Trends in Electrical and Mechanical Engineering
+    \\[5mm]--- Programme ---\\
+    \textcolor{red}{(provisional)}
+  }
+  \hfill
+  {\Large\bfseries 25 September 2026}\\[1mm]
+  {\Large#1 \hfill Lisbon local time (UTC+1)}\\
+}
+
+\newcommand{\RoomHeader}[2]{%
+  \cellcolor{sessiongray}%
+  \begin{minipage}[c][20mm][c]{\linewidth}
+    \centering\textbf{#1}\\[-1pt]
+    {\small #2}
+  \end{minipage}%
+}
+
+\begin{document}
+% ======================================================================
+% Morning programme
+% ======================================================================
+\ProgrammeHeader{\phantom{Morning Programme}}
+{\centering\Large\bfseries Morning programme\par}
+\vspace{2mm}
+
+\begin{tabularx}{\textwidth}{|T|Y|Y|Y|}
+\hline
+\OpeningEvent
+\CommonEvent{09:30--10:00}{Plenary session 1\\ Keynote Speaker: Rui Pestana (REN)}
+\CommonEventCompact{10:00--10:15}{Break and transition to parallel sessions}
+{} &
+\RoomHeader{Room 1}{Track 1 -- Energy, Power Systems and Electronics\\Chair: \textcolor{red}{To be confirmed}} &
+\RoomHeader{Room 2}{Track 2 -- Mechanical Design, Materials, Manufacturing and Industrial Engineering\\Chair: \textcolor{red}{To be confirmed}} &
+\RoomHeader{Room 3}{Track 3 -- Mechatronics, Robotics and Automation\\Track 5 -- Embedded Systems, Computational Models and Digital Twins\\Chair: \textcolor{red}{To be confirmed}}\\\cline{2-4}
+\multirow[c]{25}{25mm}{\centering\bfseries 10:15--12:00\par} & \Talk{05}{Low-Code Architecture for Behavioral Demand Response and Predictive Analytics}{Artem Antonenko, Ievgen Zaitsev, Oleh Bondarenko}{\TypeBox{R}} & \Talk{08}{The Importance of Logistics, Supply Chain Management, and ABC Item Classification Optimization Through Cross-Departmental Collaboration}{Edin Karisik}{\TypeBox{I}} & \Talk{38}{Experimental Investigation of TCP Rotation Influence on Robotic Sealant Deposition Along Curved Trajectories}{Fernando Benitez}{\TypeBox{R}\TypeBox{S}} \\\cline{2-4}
+& \Talk{10}{Analysis of the sustainability of the micro system approach method in the sizing of electrical conductors}{Fátima Monteiro}{\TypeBox{R}} & \Talk{12}{Electro-Mechanical Experimental Assessment of a Variable Speed Centrifugal Pump: An Experimental Study for Industrial Systems}{Raquel Faria}{\TypeBox{I}} & \Talk{83}{Development and Integration of an Embedded Electronics and Telemetry System for a Baja SAE Vehicle}{Guilherme Rodrigues Cardoso}{\TypeBox{R}\TypeBox{S}} \\\cline{2-4}
+& \Talk{15}{Towards More Accurate Carbon Accounting in Power Systems: Incorporating Network Losses into Renewable Energy Assessments ---Application to the Portuguese Electricity System}{António Duarte}{\TypeBox{R}\TypeBox{S}} & \Talk{16}{Mechanical Characterisation of 3D-Printed Polylactic Acid Parts Reinforced with Different Loads of Cellulose Nanocrystals}{Maxim Rogozhkin}{\TypeBox{R}\TypeBox{S}} & \Talk{33}{Predictive monitoring; Rotating Machinery; Anomaly detection; K-CUSUM; RKHS}{Marco Aurélio Freitas Santos Júnior}{\TypeBox{R}\TypeBox{S}} \\\cline{2-4}
+& \Talk{17}{Smart Control of Hybrid Domestic Hot Water Production Based on Renewable Availability and Energy Prices}{Bruno Marques}{\TypeBox{R}\TypeBox{S}} & \Talk{18}{Study on the Application of Denim Fibers in Thermoplastic Composites}{João Gomes}{\TypeBox{R}\TypeBox{S}} & \Talk{41}{Unbalance Force Estimation in Rotors via Augmented Kalman Filter: A Trial-Weight-Free Approach}{Raimundo Neto}{\TypeBox{R}\TypeBox{S}} \\\cline{2-4}
+& \Talk{19}{Development of a Modular Photovoltaic Monitoring Platform for Laboratory-Based Energy Management Studies}{Paulo Correia, Paulo Moisés Almeida da Costa}{\TypeBox{R}} & \Talk{21}{Sustainable manufacture of light alloy components based on the reuse of industrial waste}{Ricardo Costa}{\TypeBox{R}\TypeBox{S}} & \Talk{42}{Rotating machine balancing via ANN: data Augmentation}{RAIMUNDO NETO}{\TypeBox{R}\TypeBox{S}} \\\cline{2-4}
+& \Talk{27}{HVAC Modifications: Case Studies and Engineering Solutions}{Joana Veiga}{\TypeBox{I}\TypeBox{S}} & \Talk{22}{Effect of path strategies on microstructure and mechanical properties in thin arc sections using wire arc additive manufacturing}{Krishna Kishore Mugada}{\TypeBox{R}} & \Talk{51}{A Parametric Computational Framework for Aircraft Wetted Area Calculation and Zero-Lift Drag Estimation from 2D Layouts}{Felipe Dordan}{\TypeBox{R}\TypeBox{S}} \\\hline
+\end{tabularx}
+\vspace{1.5mm}
+\ProgrammeNote
+
+\newpage
+
+% ======================================================================
+% Afternoon programme
+% ======================================================================
+%\ProgrammeHeader{Afternoon programme}
+{\centering\Large\bfseries Afternoon programme\par}
+\vspace{2mm}
+
+\begin{tabularx}{\textwidth}{|T|Y|Y|Y|}
+\hline
+\CommonEventCompact{12:00--14:00}{Lunch break}
+\CommonEventCompact{14:00--14:15}{Afternoon reopening}
+\CommonEvent{14:15--14:45}{Plenary session 2\\Keynote Speaker: Marcelo Gaspar (Polytechnic University of Leiria)}
+\CommonEventCompact{14:45--15:00}{Break and transition to parallel sessions}
+{} &
+\RoomHeader{Room 1}{Track 1 -- Energy, Power Systems and Electronics\\Chair: \textcolor{red}{To be confirmed}} &
+\RoomHeader{Room 2}{Track 2 -- Mechanical Design, Materials, Manufacturing and Industrial Engineering\\Chair: \textcolor{red}{To be confirmed}} &  
+\RoomHeader{Room 3}{Track 4 -- Thermofluids, Heat Transfer and Thermal Systems\\Chair: \textcolor{red}{To be confirmed}}\\\cline{2-4}
+\multirow[c]{20}{25mm}{\centering\bfseries 15:00--16:15\par} & \Talk{49}{Design of Electric Vehicle Charging Infrastructure for a Higher Education Institution: A Case Study}{Tatiana Miranda}{\TypeBox{R}\TypeBox{S}} & \Talk{47}{Acoustic-Based Fault Identification in a Hair Dryer Using Machine Learning}{Francielle Souza, Diogo Lima, Stanley Washington Rezende, Bruno Barella}{\TypeBox{I}\TypeBox{S}} & \Talk{03}{A web application for the preliminary selection of outdoor units in multi-split air conditioning systems}{Alexandre Furtado de Barros}{\TypeBox{I}\TypeBox{S}} \\\cline{2-4}
+& \Talk{50}{Human Centric Lighting in Classrooms: Visual Comfort, Energy Efficiency, and Sustainability}{André Rodrigues}{\TypeBox{R}\TypeBox{S}} & \Talk{58}{ACM Framework\texttrademark{}: An Integrated Methodology for Asset Criticality Assessment and Strategic Maintenance Decision-Making}{Vânio Silva}{\TypeBox{I}} & \Talk{04}{A decision-support calculation tool based on a technical and economic analysis of the replacement of air-conditioning and DHW systems: a case study of the replacement of an LPG boiler}{Grigore Durbaca}{\TypeBox{I}\TypeBox{S}} \\\cline{2-4}
+& \Talk{59}{Economic Evaluation of a WtE Powerplant Integration into the District Heating System of Budapest}{Kende Kocsis}{\TypeBox{R}\TypeBox{S}} & \Talk{60}{Design and Computational Structural Evaluation of a Baja SAE Tubular Spaceframe}{Gabriel Bianchini Matos}{\TypeBox{R}\TypeBox{S}} & \Talk{13}{Energy Performance of a Variable Speed Centrifugal Fan for HVAC Applications}{Anabela Carvalho}{\TypeBox{R}} \\\cline{2-4}
+& \Talk{72}{Intelligent Fault Diagnosis in Boost Power Converters: A Systematic Literature Review}{Nuno Fidalgo}{\TypeBox{R}\TypeBox{S}} & \Talk{61}{Sizing and Modeling of a 4x4 System Applied to a Baja SAE Vehicle}{Felipe Paiva}{\TypeBox{I}\TypeBox{S}} & \Talk{14}{Energy Performance Assessment and Cost-Effective Retrofit Measures for a Hotel Building: A Portuguese Case Study}{Nuno Gomes}{\TypeBox{R}\TypeBox{S}} \\\cline{2-4}
+& \Talk{89}{Regulatory and Implementation Framework for Renewable Energy Communities in Portugal}{Tomás Adão}{\TypeBox{I}\TypeBox{S}} & \Talk{62}{Application of the OEE Indicator for Improving Industrial Performance}{Maria Miguel Santos}{\TypeBox{I}\TypeBox{S}} & \Talk{20}{Influence of the operating point on the life cycle environmental impacts of a thermoelectric module for cooling applications}{Mário Loureiro}{\TypeBox{R}} \\\hline
+\CommonEventCompact{16:15--16:30}{Virtual coffee break and networking}
+{} &
+\RoomHeader{Room 1}{Track 6 -- Sustainability Assessment in Engineering Systems\\Chair: \textcolor{red}{To be confirmed}} &
+\RoomHeader{Room 2}{Track 2 -- Mechanical Design, Materials, Manufacturing and Industrial Engineering\\Chair: \textcolor{red}{To be confirmed}} &
+\RoomHeader{Room 3}{Track 4 -- Thermofluids, Heat Transfer and Thermal Systems\\Chair: \textcolor{red}{To be confirmed}}\\\cline{2-4}
+\multirow[c]{35}{25mm}{\centering\bfseries 16:30--18:30\par} & \Talk{11}{Engineering Framework for Improving Energy Efficiency in Existing Wastewater Treatment Plants}{Stela Sefa}{\TypeBox{R}} & \Talk{64}{Characterization of the Ramp Milling Operation with Different Degrees of Inclination}{Fernando Simões}{\TypeBox{I}} & \Talk{25}{Geographic Sensitivity of LFC-Based SHIP Systems Under Different Industrial Load Profiles}{Bernardo Farrero}{\TypeBox{I}\TypeBox{S}} \\\cline{2-4}
+& \Talk{43}{Comparative Life Cycle Environmental and Cost Assessment of Additively Manufactured and Conventionally Machined Mould Inserts for Injection Moulding}{Pedro Marques}{\TypeBox{I}} & \Talk{70}{Optimizing Baja SAE Suspensions: A Kinematic and Structural Study}{Otávio Pinheiro}{\TypeBox{R}\TypeBox{S}} & \Talk{31}{Physics-Informed Correction of RANS-Based CFD Fields for Backward-Facing Step Flow Using Hybrid Neural Networks}{Matheus Borges}{\TypeBox{R}\TypeBox{S}} \\\cline{2-4}
+& \Talk{44}{Comparative Life Cycle Costing and Environmental Assessment of Food-Contact LDPE Bags with Recycled Content}{Pedro Marques}{\TypeBox{I}} & \Talk{71}{Development and Preliminary Validation of a MATLAB Application for Plantar Thermal Asymmetry Detection in Diabetic Foot Assessment}{Mónica Bastos}{\TypeBox{R}\TypeBox{S}} & \Talk{37}{A conservative Euler--Lagrange conversion framework for primary atomisation: morphological classification and linear-stability fragmentation on adaptive parallel meshes}{Saulo Andrade Pinto}{\TypeBox{R}\TypeBox{S}} \\\cline{2-4}
+& \Talk{45}{Integrated Life Cycle Costing and Environmental Assessment of Food-Contact Polypropylene Crates with Recycled Content}{Joao Malca}{\TypeBox{I}} & \Talk{84}{Development of a Low-Cost Sound Intensity Probe}{José Robson Oliveira Júnior}{\TypeBox{R}\TypeBox{S}} & \Talk{67}{Computational Investigation of Integrated Battery Cooling Systems for Enhanced Thermal Management of EV Battery Packs}{Nancy Maurya}{\TypeBox{R}\TypeBox{S}} \\\cline{2-4}
+& \Talk{68}{Renewable energy-powered supply chain for enabling climate-resilient demand response for hard-to-abate industries}{KAVYA S}{\TypeBox{R}\TypeBox{S}} & \Talk{85}{Environmental Anonymous Noise-Based In-Situ Sound Absorption Characterization Using Standard Laboratory Assets}{Daniel Lucas Coutinho da Silva}{\TypeBox{R}\TypeBox{S}} & \Talk{69}{CFD Analysis of an Air Cooled 26650 Lithium-Ion Battery Pack with Flow Disturbing Cylindrical Fins}{Ashish Kumar Saini}{\TypeBox{I}\TypeBox{S}} \\\cline{2-4}
+& \Talk{74}{Technical and Economic Feasibility Analysis of Green Hydrogen Systems}{Miguel Machado, Nelson Luz}{\TypeBox{R}\TypeBox{S}} & \Talk{87}{Toward a Bidirectional Vibration--Current Test Rig for Remaining Useful Life Prognostics of Rolling Bearings under Electrical Discharge Damage}{Gabriel Assunção Nicchetti, Diogo Lima, Francielle Souza, Eduardo Rabelo Domingues}{\TypeBox{I}\TypeBox{S}} & \Talk{73}{Comparative Analysis of Pope and GRI-Mech Mechanisms for Methane Using the Cantera Library}{Maria Eduarda Nunes}{\TypeBox{R}\TypeBox{S}} \\\cline{2-4}
+& \Talk{75}{Less Energy, Greater Efficiency: The Future of Commercial Buildings}{Paulo Vaz}{\TypeBox{R}} & \Talk{90}{Model-Assisted Design of an Alternative Autothermic Continuous Biochar Reactor for Agricultural Residue Valorization}{Frederico Kossack}{\TypeBox{R}\TypeBox{S}} & \Talk{86}{CFD Modelling of Eucalyptus Woodchips Pyrolysis for Increased Renewable Hydrogen Production}{Mateus Dreveck Anziliero}{\TypeBox{R}\TypeBox{S}} \\\cline{2-4}
+& \Talk{77}{Design of Electrical Infrastructure Solutions for a Data Center}{Luís Simões, Ricardo Fernandes}{\TypeBox{R}\TypeBox{S}} & \EmptyTalk & \EmptyTalk \\\hline
+\CommonEventCompact{18:30--19:00}{Awards and Distinctions}
+\CommonEventCompact{19:00--19:15}{Closing session}
+\end{tabularx}
+\vspace{1.5mm}
+\ProgrammeNote
+
+\end{document}
