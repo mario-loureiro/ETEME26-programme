@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.7.28)  24 SEP 2026 20:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.7.28)  25 SEP 2026 09:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -210,29 +210,29 @@ LaTeX Font Info:    ... okay on input line 96.
 \makeMPintoPDFobject=\count295
 \everyMPtoPDFconversion=\toks25
 ) (/usr/share/texlive/texmf-dist/tex/latex/lm/ot1lmr.fd) (/usr/share/texlive/texmf-dist/tex/latex/lm/omllmm.fd) (/usr/share/texlive/texmf-dist/tex/latex/lm/omslmsy.fd) (/usr/share/texlive/texmf-dist/tex/latex/lm/omxlmex.fd)
-Underfull \hbox (badness 1436) in paragraph at lines 119--119
+Underfull \hbox (badness 1436) in paragraph at lines 120--120
 []\T1/lmr/bx/n/9 Towards More Ac-cu-rate Car-bon Ac-count-ing in
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 119--119
-[]\T1/lmr/bx/n/9 Predictive mon-i-tor-ing; Ro-tat-ing Ma-chin-ery;
+Underfull \hbox (badness 3690) in paragraph at lines 120--120
+\T1/lmr/bx/n/9 ery Vi-bra-tion Us-ing Ker-nel CUSUM with a
  []
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}] (/usr/share/texlive/texmf-dist/tex/latex/lm/ts1lmr.fd)
-Underfull \hbox (badness 2582) in paragraph at lines 162--162
+Underfull \hbox (badness 2582) in paragraph at lines 163--163
 \T1/lmr/bx/n/9 Com-fort, En-ergy Ef-fi-ciency, and Sus-tain-abil-ity
  []
 
 
-Underfull \hbox (badness 3250) in paragraph at lines 162--162
+Underfull \hbox (badness 3250) in paragraph at lines 163--163
 []\T1/lmr/bx/n/9 Environmental Anony-mous Noise-Based In-Situ
  []
 
 
-Underfull \hbox (badness 1590) in paragraph at lines 162--162
+Underfull \hbox (badness 1590) in paragraph at lines 163--163
 []\T1/lmr/bx/n/9 Technical and Eco-nomic Fea-si-bil-ity Anal-y-sis of
  []
 
@@ -251,7 +251,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  57i,18n,83p,690b,400s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmri8.pfb>
-Output written on programme.pdf (2 pages, 232829 bytes).
+Output written on programme.pdf (2 pages, 232734 bytes).
 PDF statistics:
  56 PDF objects out of 1000 (max. 8388607)
  34 compressed objects within 1 object stream
